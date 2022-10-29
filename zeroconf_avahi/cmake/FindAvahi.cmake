@@ -19,8 +19,8 @@ find_library(AVAHI_COMMON_LIBRARY
 set(AVAHI_LIBRARIES ${AVAHI_CLIENT_LIBRARY} ${AVAHI_COMMON_LIBRARY})
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(Avahi DEFAULT_MSG
-				  AVAHI_CLIENT_LIBRARY
-				  AVAHI_COMMON_LIBRARY
+                  AVAHI_CLIENT_LIBRARY
+                  AVAHI_COMMON_LIBRARY
                                   AVAHI_INCLUDE_DIR)
 mark_as_advanced(AVAHI_INCLUDE_DIR AVAHI_CLIENT_LIBRARY AVAHI_COMMON_LIBRARY)
 

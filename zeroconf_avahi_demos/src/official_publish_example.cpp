@@ -46,14 +46,14 @@ static void entry_group_callback(AvahiEntryGroup *g, AvahiEntryGroupState state,
 
     switch (state) {
         case AVAHI_ENTRY_GROUP_ESTABLISHED :
-        	std::cout << "Entry group established" << std::endl;
+            std::cout << "Entry group established" << std::endl;
             /* The entry group has been established successfully */
             fprintf(stderr, "Service '%s' successfully established.\n", name);
             break;
 
         case AVAHI_ENTRY_GROUP_COLLISION : {
             char *n;
-        	std::cout << "Entry group collision" << std::endl;
+            std::cout << "Entry group collision" << std::endl;
 
             /* A service name collision with a remote service
              * happened. Let's pick a new name */
@@ -70,7 +70,7 @@ static void entry_group_callback(AvahiEntryGroup *g, AvahiEntryGroupState state,
 
         case AVAHI_ENTRY_GROUP_FAILURE :
 
-        	std::cout << "Entry group failure" << std::endl;
+            std::cout << "Entry group failure" << std::endl;
             fprintf(stderr, "Entry group failure: %s\n", avahi_strerror(avahi_client_errno(avahi_entry_group_get_client(g))));
 
             /* Some kind of failure happened while we were registering our services */
@@ -78,10 +78,10 @@ static void entry_group_callback(AvahiEntryGroup *g, AvahiEntryGroupState state,
             break;
 
         case AVAHI_ENTRY_GROUP_UNCOMMITED:
-        	std::cout << "Entry group uncommitted" << std::endl;
-        	break;
+            std::cout << "Entry group uncommitted" << std::endl;
+            break;
         case AVAHI_ENTRY_GROUP_REGISTERING:
-        	std::cout << "Entry group registering" << std::endl;
+            std::cout << "Entry group registering" << std::endl;
             break;
     }
 }
